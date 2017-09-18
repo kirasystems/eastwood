@@ -1,4 +1,4 @@
-(defproject kirasystems/eastwood "0.2.5-SNAPSHOT"
+(defproject kirasystems/eastwood "0.2.5"
   :description "A Clojure lint tool"
   :url "https://github.com/kirasystems/eastwood"
   :license {:name "Eclipse Public License"
