@@ -1,6 +1,6 @@
-(defproject jonase/eastwood "0.2.5-SNAPSHOT"
+(defproject kirasystems/eastwood "0.2.5-SNAPSHOT"
   :description "A Clojure lint tool"
-  :url "https://github.com/jonase/eastwood"
+  :url "https://github.com/kirasystems/eastwood"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :global-vars {*warn-on-reflection* true
@@ -46,4 +46,17 @@
   ;; Eastwood may work with earlier Leiningen versions, but this is
   ;; close to the earliest version that it was most tested with.
   :min-lein-version "2.3.0"
-  :resource-paths ["resource"])
+  :resource-paths ["resource"]
+
+  :repositories [["releases" {:url "https://clojars.org/repo"
+                              :sign-releases false
+                              :username :env
+                              :password :env}]]
+  ;;; Don't sign the tag, and don't deploy
+  :release-tasks [["vcs" "assert-committed"]
+                  ["change" "version" "leiningen.release/bump-version" "release"]
+                  ["vcs" "commit"]
+                  ["vcs" "tag" "--no-sign"]
+                  ["change" "version" "leiningen.release/bump-version"]
+                  ["vcs" "commit"]
+                  ["vcs" "push"]])

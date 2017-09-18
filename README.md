@@ -53,7 +53,7 @@ released to fix that problem.
 Merge the following into your `$HOME/.lein/profiles.clj` file:
 
 ```clojure
-{:user {:plugins [[jonase/eastwood "0.2.4"]] }}
+{:user {:plugins [[kirasystems/eastwood "0.2.5"]] }}
 ```
 
 To run Eastwood with the default set of lint warnings on all of the
@@ -406,12 +406,12 @@ If you use Leiningen, merge this into your project's `project.clj`
 file first:
 
 ```clojure
-:profiles {:dev {:dependencies [[jonase/eastwood "0.2.4" :exclusions [org.clojure/clojure]]]}}
+:profiles {:dev {:dependencies [[kirasystems/eastwood "0.2.5" :exclusions [org.clojure/clojure]]]}}
 ```
 
 If you use a different build tool, you will need to add the dependency
 above in the manner appropriate for it.  See
-[Clojars](https://clojars.org/jonase/eastwood) for Gradle and Maven
+[Clojars](https://clojars.org/kirasystems/eastwood) for Gradle and Maven
 syntax.
 
 From within your REPL, there are two different functions you may call,
@@ -641,7 +641,7 @@ can be used to modify this merging behavior.
 For example, if your user-wide `profiles.clj` file contains this:
 
 ```clojure
-{:user {:plugins [[jonase/eastwood "0.2.4"]]
+{:user {:plugins [[kirasystems/eastwood "0.2.5"]]
         :eastwood {:exclude-linters [:unlimited-use]
                    :debug [:time]}
         }}
@@ -2288,7 +2288,7 @@ your local Maven repository:
     $ cd path/to/eastwood
     $ lein install
 
-Then add `[jonase/eastwood "0.2.5-SNAPSHOT"]` (or whatever is the
+Then add `[kirasystems/eastwood "0.2.6-SNAPSHOT"]` (or whatever is the
 current version number in the defproject line of `project.clj`) to
 your `:plugins` vector in your `:user` profile, perhaps in your
 `$HOME/.lein/profiles.clj` file.
