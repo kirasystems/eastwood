@@ -1,5 +1,10 @@
 # Change log for Eastwood
 
+## Changes from version 0.2.4 to 0.2.5
+
+Internal enhancements:
+
+* Update version of leinjacker for :managed-dependencies support.
 
 ## Changes from version 0.2.3 to 0.2.4
 

@@ -63,6 +63,6 @@ For other options, see the full documentation on-line here:
           (pp/pprint (into (sorted-map) opts))
           (println))
         (leval/eval-in-project
-         (add-if-missing project ['jonase/eastwood eastwood-version-string])
+         (add-if-missing project ['kirasystems/eastwood eastwood-version-string])
          `(eastwood.versioncheck/run-eastwood '~opts)
          '(require 'eastwood.versioncheck))))))
